@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<AssemblyName>FSAutoCollectStuff</AssemblyName>
+		<GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+		<TargetFramework>net472</TargetFramework>
+		<LangVersion>latest</LangVersion>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="BepInEx">
+			<HintPath>D:\SteamLibrary\steamapps\common\Fallout Shelter\BepInEx\core\BepInEx.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="0Harmony">
+			<HintPath>D:\SteamLibrary\steamapps\common\Fallout Shelter\BepInEx\core\0Harmony.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+
+		<Reference Include="Assembly-CSharp">
+			<HintPath>D:\SteamLibrary\steamapps\common\Fallout Shelter\FalloutShelter_Data\Managed\Assembly-CSharp.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+
+		<!-- Монолитная UnityEngine — именно её требует BepInEx и Assembly-CSharp -->
+		<Reference Include="UnityEngine">
+			<HintPath>D:\SteamLibrary\steamapps\common\Fallout Shelter\FalloutShelter_Data\Managed\UnityEngine.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+
+		<!-- Оставляем на случай, если игра/какие-то моды собраны под сплит-модули -->
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>D:\SteamLibrary\steamapps\common\Fallout Shelter\FalloutShelter_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+
+		<Reference Include="System.Core" />
+	</ItemGroup>
+</Project>

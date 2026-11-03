@@ -1,0 +1,40 @@
+# === —борка .NET ===
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+*.dll
+*.pdb
+*.exe
+*.user
+*.suo
+*.cache
+*.log
+
+# »сключение: если хотите версионировать финальный плагин в /dist Ч раскомментируйте и настройте
+# !dist/Krimson_AutoCollect.dll
+
+# === Visual Studio / Rider ===
+.vs/
+.idea/
+*.userprefs
+*.DotSettings.user
+.vscode/
+
+# === NuGet ===
+packages/
+*.nupkg
+project.assets.json
+project.nuget.cache
+*.nuget.props
+*.nuget.targets
+
+# === OS ===
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# === »гровые и сторонние DLL Ч Ќ≈ коммитим ===
+# (Assembly-CSharp.dll, UnityEngine*.dll, BepInEx.dll, 0Harmony.dll
+#  Ч это чужа€ интеллектуальна€ собственность и они не должны попадать в репозиторий)
+*.dll.mdb
